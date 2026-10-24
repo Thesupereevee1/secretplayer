@@ -69,7 +69,8 @@ public abstract class ServerPacketFilterMixin {
                 server.getPlayerList().getPlayer(playerProfile().id());
 
         if (viewer != null
-                && Commands.LEVEL_GAMEMASTERS.check(viewer.permissions())) {
+                && Commands.LEVEL_GAMEMASTERS.check(viewer.permissions())
+                && !SecretPlayer.hideFromOperators(server)) {
             return false;
         }
 
