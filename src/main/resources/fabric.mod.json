@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "secretplayer",
+	"version": "${version}",
+	"name": "SecretPlayer",
+	"description": "A server-side Fabric mod to hide selected players from TAB, server-list player samples, and join/leave messages. Supports offline UUIDs and persistent hiding across restarts.",
+	"authors": [
+		"Thesupereevee"
+	],
+	"contact": {
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/secretplayer/icon.png",
+	"environment": "server",
+	"entrypoints": {
+		"main": [
+			"eevee.secretplayer.SecretPlayer"
+		]
+	},
+	"mixins": [
+		"secretplayer.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
